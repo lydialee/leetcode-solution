@@ -1,9 +1,16 @@
-/* 1 a natural number is a sum of two squares 
-     if and only if each prime factor that’s 3 modulo 4 occurs to an even power 
-     in the number’s prime factorization.
+/* 1 费马定理 Fer'mat Theorem
+     time: O(√c*logc), space: O(1)
+     1） 第一层 - for 循环：最多 0~√c 个 prime factor，
+     2） 第二层 - while 循环：每个 prime factor 最多循环 logc 次。
+         i = 2， logc; i = 3, log3c; i = 4, log4c; ...
+     因此总共最坏情况：O(√c*logc)
+
+     Any positive number nn is expressible as a sum of two squares 
+     if and only if the prime factorization of n, 
+     every prime of the form (4k+3) occurs an even number of times.
      
      如果一个自然数是两个数的平方和，
-     当且仅当，这个数质因式分解数中，每一个模 4 余 3 的质因数的个数，是偶数。
+     当且仅当，这个数质因式分解数中，[每一个]模 4 余 3 的质因数的个数，都是偶数。
  */
 public class Solution {
     public boolean judgeSquareSum(int c) {
@@ -27,7 +34,7 @@ public class Solution {
     }
 }
 
-// 1 two pointers
+// 2 two pointers
 // time：O(√c), space: O( 1 )
 class Solution {
     public boolean judgeSquareSum(int c) {
@@ -49,7 +56,7 @@ class Solution {
     }
 }
 
-// 2 sqrt ime: O( √c*logc ) , space: O( 1 )
+// 3 sqrt time: O( √c*logc ) , space: O( 1 )
 class Solution {
     public boolean judgeSquareSum(int c) {
         for (int i = 0; i <= Math.sqrt(c); i++) {
