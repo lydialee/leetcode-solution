@@ -35,7 +35,7 @@ public class Solution {
 }
 
 // 2 two pointers
-// time：O(√c), space: O( 1 )
+// time：O(√c*logc), space: O( 1 )
 class Solution {
     public boolean judgeSquareSum(int c) {
         if (c < 0) {
