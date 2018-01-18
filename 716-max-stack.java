@@ -3,6 +3,7 @@
      TreeMap             max values
      time:  push O(lgn) pop O(lgn)  top O(1)  peekMax  O( 1 )  popMax O(lgn)
      space: O(n)
+     (TreeMap: a map that keeps keys in order. so add, delete is lgn time.)
  */
 class MaxStack {
     TreeMap<Integer, List<Node>> map; // <value, node>. may have duplicates
