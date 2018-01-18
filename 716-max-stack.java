@@ -94,10 +94,7 @@ class Node {
     public Node(int v) {val = v;}
 }
 
-
-
-
-/* 1 two arrays
+/* 2 two arrays
      values     all numbers
      maxValues  max values
      time:  push O(1) pop O(1) top O(1)  peekMax  O( 1 )  popMax O(n)
